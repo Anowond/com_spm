@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4.0" method="upgrade">
+    <name>com_spm</name>
+    <creationDate>2024-03-14</creationDate>
+    <copyright>2024 Baroux Maxime</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Baroux Maxime</author>
+    <authorEmail>baroux.maxime2@gmail.com</authorEmail>
+    <authorUrl>http://dwwm.joomla.com</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>COM_SPM_XML_DESCRIPTION</description>
+    <namespace path="src">Piedpiper\Component\Spm</namespace>
+
+    <administration>
+        <files folder="admin">
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>services</folder>
+        </files>
+        <menu link="option=com_spm" img="class:book">COM_SPM_BACKEND_MENU</menu>
+    </administration>
+</extension>
