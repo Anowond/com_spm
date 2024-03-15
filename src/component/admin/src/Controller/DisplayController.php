@@ -6,5 +6,5 @@ use Joomla\CMS\MVC\Controller\BaseController;
 
 class DisplayController extends BaseController
 {
-    protected $default_view = 'cpanel';
+    protected $default_view = 'projects';
 }
