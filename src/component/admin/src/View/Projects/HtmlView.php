@@ -1,8 +1,10 @@
 <?php 
 
+
 namespace Piedpiper\Component\Spm\Administrator\View\Projects;
 use Joomla\CMS\MVC\View\GenericDataException;
-use Joomla\CMS\MVC\View\HtmlView as  BaseHtmlView;
+use Joomla\CMS\MVC\View\HtmlView as BaseHtmlView;
+
 
 class HtmlView extends BaseHtmlView
 {
@@ -14,6 +16,7 @@ class HtmlView extends BaseHtmlView
 
     public function display($tpl = null): void
     {
+        dump($this);
         $this->state = $this->get('State');
         $this->items = $this->get('Items');
         $this->pagination = $this->get('Pagination');
