@@ -10,13 +10,23 @@
     <version>CVS: 1.0.0</version>
     <description>COM_SPM_XML_DESCRIPTION</description>
     <namespace path="src">Piedpiper\Component\Spm</namespace>
-
     <administration>
         <files folder="admin">
+            <folder>forms</folder>
             <folder>src</folder>
             <folder>tmpl</folder>
             <folder>services</folder>
+            <file>access.xml</file>
         </files>
         <menu link="option=com_spm" img="class:book">COM_SPM_BACKEND_MENU</menu>
+        <submenu>
+            <menu link = "option=com_spm&amp;view=projects" img="default">
+                COM_SPM_PROJECTS
+            </menu>
+        </submenu>
     </administration>
+    <files folder="site">
+        <folder>src</folder>
+        <folder>tmpl</folder>
+    </files>
 </extension>

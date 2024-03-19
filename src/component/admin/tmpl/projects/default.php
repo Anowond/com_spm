@@ -5,7 +5,7 @@ use Joomla\CMS\Router\Route;
 use Joomla\CMS\Language\Text;
 
 $listOrder = $this->escape($this->state->get('list.ordering'));
-$listDirn = $this->escape($this->sate->get('list.direction'));
+$listDirn = $this->escape($this->state->get('list.direction'));
 
 ?>
 

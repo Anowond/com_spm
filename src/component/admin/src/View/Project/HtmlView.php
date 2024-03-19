@@ -4,6 +4,7 @@ namespace Piedpiper\Component\Spm\Administrator\View\Project;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
+use Joomla\CMS\Toolbar\Toolbar;
 use Joomla\CMS\Helper\ContentHelper;
 use Joomla\CMS\Toolbar\ToolbarHelper;
 use Joomla\CMS\MVC\View\GenericDataException;
@@ -32,11 +33,14 @@ class HtmlView extends BaseHtmlView
     protected function addToolbar()
     {
         Factory::getApplication()->input->set('hidemainmenu', true);
-        $isNew = ($this->item->is == 0);
+        $isNew = ($this->item->id == 0);
         $canDo = ContentHelper::getActions('com_spm');
-        $toolbar = Factory::getContainer()->get(ToolbarFactoryInterface::class)->createToolbar();
+        $toolbar = Toolbar::getInstance();
 
-        ToolbarHelper::title(Text::_('COM_SPM_PROJECT_TITLE' . ($isNew ? 'ADD' : 'EDIT')));
+        ToolbarHelper::title(
+            Text::_('COM_SPM_PROJECT_TITLE_' . ($isNew ?
+            'ADD' : 'EDIT'))
+        );
 
         if ($canDo->get('core.create')) {
             if ($isNew) {
